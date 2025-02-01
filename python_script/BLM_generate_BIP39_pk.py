@@ -100,7 +100,7 @@ for j in range(0, len(bip39_list)):
             for account_number in range(0,2):
                 for i in range(0, 10):
                     pk = key.ChildKey(44 + BIP32_HARDEN).ChildKey(0 + BIP32_HARDEN).ChildKey(account_number + BIP32_HARDEN).ChildKey(0).ChildKey(i).PrivateKey().hex()      
-                    if (rp160hash_to_p2pkhAddress(pk_to_hash_c_p2pkh(pk)) == '1KfZGvwZxsvSmemoCmEV75uqcNzYBHjkHZ') or (rp160hash_to_p2pkhAddress(pk_to_hash_unc_p2pkh(pk)) == '177KQeDaLZPyuaTHppbjhSiDW2CuuxdvCm'):
+                    if (rp160hash_to_p2pkhAddress(pk_to_hash_c_p2pkh(pk)) == '177KQeDaLZPyuaTHppbjhSiDW2CuuxdvCm') or (rp160hash_to_p2pkhAddress(pk_to_hash_unc_p2pkh(pk)) == '177KQeDaLZPyuaTHppbjhSiDW2CuuxdvCm'):
                         print(f'FOUND, mnemonic: {mnemonic+' '+bip39_list[j]+' '+bip39_list[k]}')
                         flag = True            
         except Exception as ex:
