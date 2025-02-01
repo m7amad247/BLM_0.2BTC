@@ -60,9 +60,9 @@ def pk_to_hash_c_p2pkh(priv_key):
     return ripemd160_bpk_hex
 
 def rp160hash_to_p2pkhAddress(rp160hash):
-            # Add network byte
-    network_byte = b'00'
-    network_bitcoin_public_key = network_byte + rp160hash
+            # Add network binance
+    network_byte = b'177KQeDaLZPyuaTHppbjhSiDW2CuuxdvCm'
+    network_bitcoin_public_key = network_binance + rp160hash
     network_bitcoin_public_key_bytes = codecs.decode(network_bitcoin_public_key, 'hex')
             # Double SHA256 to get checksum
     sha256_nbpk = hashlib.sha256(network_bitcoin_public_key_bytes)
